@@ -29,17 +29,13 @@
         </style>
     </head>
     <body class="bg-gray-50 text-gray-800 font-sans p-4 md:p-8">
-        <div
-            class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10"
-        >
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10">
             <h1 class="text-3xl font-bold text-blue-700 text-center mb-6">
                 Trắc Nghiệm TOEIC Tổng Hợp
             </h1>
 
             <!-- Tabs -->
-            <div
-                class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-8"
-            >
+            <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-8">
                 <button
                     id="tab-listening"
                     class="tab-btn bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 focus:outline-none"
@@ -54,18 +50,11 @@
                 </button>
             </div>
 
-            <div
-                class="flex flex-col sm:flex-row justify-between items-center mb-6 border-b pb-4"
-            >
-                <h2
-                    id="section-title"
-                    class="text-xl font-semibold text-gray-600"
-                >
-                    Phần Nghe (Part 3) - Câu 32 đến 90
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 border-b pb-4">
+                <h2 id="section-title" class="text-xl font-semibold text-gray-600">
+                    Phần Nghe (Part 3, 4) - Câu 32 đến 100
                 </h2>
-                <div
-                    class="mt-4 sm:mt-0 flex items-center bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 shadow-sm transition hover:bg-blue-100"
-                >
+                <div class="mt-4 sm:mt-0 flex items-center bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 shadow-sm transition hover:bg-blue-100">
                     <input
                         type="checkbox"
                         id="shuffle-checkbox"
@@ -110,7 +99,7 @@
         </div>
 
         <script>
-            // Dữ liệu Phần Nghe (từ câu 32 đến 90 như cũ)
+            // Dữ liệu Phần Nghe (từ câu 32 đến 100)
             const listeningData = [
                 {
                     id: 32,
@@ -768,9 +757,119 @@
                     ],
                     answer: 2,
                 },
+                {
+                    id: 91,
+                    question: "What does the speaker say he will do?",
+                    options: [
+                        "Call a client",
+                        "Print a document",
+                        "Schedule a meeting",
+                        "Upload some files",
+                    ],
+                    answer: 3,
+                },
+                {
+                    id: 92,
+                    question: "What is being reported on?",
+                    options: [
+                        "The purchase of a baseball team",
+                        "A new stadium construction",
+                        "A retirement of a player",
+                        "A change in ticket prices",
+                    ],
+                    answer: 0,
+                },
+                {
+                    id: 93,
+                    question: "What does the speaker say Mr. Abalora is passionate about?",
+                    options: [
+                        "Marketing strategy",
+                        "Community building",
+                        "Financial planning",
+                        "Product design",
+                    ],
+                    answer: 1,
+                },
+                {
+                    id: 94,
+                    question: "Why does the speaker say, \"we've been told that before\"?",
+                    options: [
+                        "To express doubt",
+                        "To show agreement",
+                        "To complain about a rule",
+                        "To apologize for a mistake",
+                    ],
+                    answer: 0,
+                },
+                {
+                    id: 95,
+                    question: "Who are the listeners?",
+                    options: [
+                        "Factory workers",
+                        "Sales staff",
+                        "Accounting managers",
+                        "Delivery drivers",
+                    ],
+                    answer: 1,
+                },
+                {
+                    id: 96,
+                    question: "What does the speaker hope will happen?",
+                    options: [
+                        "A budget will be approved.",
+                        "Customers will be told about Kolee's high-quality products.",
+                        "New employees will be hired.",
+                        "A store will open on time.",
+                    ],
+                    answer: 1,
+                },
+                {
+                    id: 97,
+                    question: "Look at the graphic. What type of exercise equipment does the speaker say is new for the company?",
+                    options: [
+                        "Rowing machines",
+                        "Treadmills",
+                        "Stationary bikes",
+                        "Free weights",
+                    ],
+                    answer: 0,
+                },
+                {
+                    id: 98,
+                    question: "What is the speaker pleased to announce?",
+                    options: [
+                        "A discount on membership",
+                        "A new cafeteria menu",
+                        "Learning activities for teens",
+                        "Extended business hours",
+                    ],
+                    answer: 2,
+                },
+                {
+                    id: 99,
+                    question: "What does the speaker say about science camps?",
+                    options: [
+                        "A registration deadline has changed.",
+                        "More instructors are needed.",
+                        "The location has moved.",
+                        "The fee has been reduced.",
+                    ],
+                    answer: 0,
+                },
+                {
+                    id: 100,
+                    question: "Look at the graphic. Who can the listeners speak to by pressing seven?",
+                    options: [
+                        "David Lee",
+                        "Sarah Jones",
+                        "Carmen Ruiz",
+                        "Michael Smith",
+                    ],
+                    answer: 2,
+                }
             ];
 
-            // Dữ liệu Phần Đọc (100 câu mới)
+            // Dữ liệu Phần Đọc (100 câu)
             const readingData = [
                 {
                     id: 1,
@@ -1981,7 +2080,7 @@
                     tabReading.classList.remove("bg-blue-600", "text-white");
                     currentDataSource = listeningData;
                     sectionTitle.innerText =
-                        "Phần Nghe (Part 3) - Câu 32 đến 90";
+                        "Phần Nghe (Part 3, 4) - Câu 32 đến 100";
                 } else {
                     tabReading.classList.add("bg-blue-600", "text-white");
                     tabReading.classList.remove("bg-gray-200", "text-gray-700");
