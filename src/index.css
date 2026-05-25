@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.correct-answer {
+  background-color: #d1fae5;
+  border-color: #10b981;
+}
+
+.wrong-answer {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+.correct-text {
+  color: #059669;
+  font-weight: bold;
+}
+
+.wrong-text {
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+.tab-btn {
+  transition: all 0.3s ease;
+}

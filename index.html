@@ -1,102 +1,15 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Trắc Nghiệm TOEIC Nghe & Đọc</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            .correct-answer {
-                background-color: #d1fae5;
-                border-color: #10b981;
-            }
-            .wrong-answer {
-                background-color: #fee2e2;
-                border-color: #ef4444;
-            }
-            .correct-text {
-                color: #059669;
-                font-weight: bold;
-            }
-            .wrong-text {
-                color: #b91c1c;
-                font-weight: bold;
-            }
-            /* Hiệu ứng chuyển tab mượt mà */
-            .tab-btn {
-                transition: all 0.3s ease;
-            }
-        </style>
-    </head>
-    <body class="bg-gray-50 text-gray-800 font-sans p-4 md:p-8">
-        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10">
-            <h1 class="text-3xl font-bold text-blue-700 text-center mb-6">
-                Trắc Nghiệm TOEIC Tổng Hợp
-            </h1>
-
-            <!-- Tabs -->
-            <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-8">
-                <button
-                    id="tab-listening"
-                    class="tab-btn bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 focus:outline-none"
-                >
-                    🎧 Phần Nghe (Listening)
-                </button>
-                <button
-                    id="tab-reading"
-                    class="tab-btn bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-lg shadow hover:bg-gray-300 focus:outline-none"
-                >
-                    📖 Phần Đọc (Reading)
-                </button>
-            </div>
-
-            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 border-b pb-4">
-                <h2 id="section-title" class="text-xl font-semibold text-gray-600">
-                    Phần Nghe (Part 3, 4) - Câu 32 đến 100
-                </h2>
-                <div class="mt-4 sm:mt-0 flex items-center bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 shadow-sm transition hover:bg-blue-100">
-                    <input
-                        type="checkbox"
-                        id="shuffle-checkbox"
-                        class="w-5 h-5 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
-                    />
-                    <label
-                        for="shuffle-checkbox"
-                        class="ml-2 text-sm font-bold text-blue-800 cursor-pointer"
-                        >Xáo trộn câu & đáp án</label
-                    >
-                </div>
-            </div>
-
-            <div id="quiz-container" class="space-y-8">
-                <!-- Dữ liệu câu hỏi sẽ được render bằng JavaScript vào đây -->
-            </div>
-
-            <div class="mt-10 flex justify-center">
-                <button
-                    id="submit-btn"
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full shadow-md transition duration-300 text-lg"
-                >
-                    Kiểm tra kết quả
-                </button>
-            </div>
-
-            <div
-                id="result-container"
-                class="hidden mt-8 text-center p-6 bg-blue-50 rounded-lg border border-blue-200"
-            >
-                <h3 class="text-2xl font-bold text-blue-800 mb-2">
-                    Kết quả của bạn
-                </h3>
-                <p id="score-text" class="text-xl"></p>
-                <button
-                    id="retry-btn"
-                    class="mt-4 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full transition duration-300"
-                >
-                    Làm lại phần này
-                </button>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trắc Nghiệm TOEIC Nghe & Đọc</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 
         <script>
             // Dữ liệu Phần Nghe (từ câu 32 đến 100)
